@@ -54,6 +54,7 @@ Authorization: Token <your_token_here>
     public=True,
     permission_classes=[AllowAny],
     authentication_classes=[],
+    url='https://crmuz.up.railway.app', 
 )
 
 urlpatterns = [
