@@ -68,6 +68,9 @@ class Migration(migrations.Migration):
             name="year",
             field=models.PositiveSmallIntegerField(default=2026),
         ),
+        migrations.RunSQL(
+            "ALTER TABLE payments_payment ALTER COLUMN month TYPE smallint USING 1",
+        ),
         migrations.AlterField(
             model_name="payment",
             name="month",
