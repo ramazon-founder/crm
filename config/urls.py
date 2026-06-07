@@ -35,26 +35,91 @@ schema = get_schema_view(
         title="CRM API",
         default_version="v1",
         description="""
-## CRM Tizimi REST API
+# 🚀 CRM System REST API Documentation
 
-### Autentifikatsiya
-Barcha himoyalangan endpointlar uchun Token kerak:
+## 🔐 Authentication
+All protected endpoints require token authentication:
+
+
 Authorization: Token <your_token_here>
 
-### Endpointlar
-- **Users** — Ro'yxatdan o'tish, login, profil boshqarish
-- **Students** — Talabalar CRUD
-- **Teachers** — O'qituvchilar CRUD  
-- **Subjects** — Fanlar CRUD
-- **Grades** — Baho va reytinglar CRUD
-- **Payments** — To'lovlar CRUD
 
-        """
+---
+
+## 📌 API Modules
+
+### 👤 Users
+- User registration
+- Login / authentication
+- Profile management
+
+### 🎓 Students
+- CRUD operations for students
+- Student profile management
+
+### 👨‍🏫 Teachers
+- CRUD operations for teachers
+- Teacher profile management
+
+### 📚 Subjects
+- Create, update, delete subjects
+- Subject management system
+
+### 🏫 Groups
+- Group creation and management
+- Student grouping system
+
+### 🏅 Grades
+- Student grading system
+- Performance tracking
+
+### 💳 Payments
+- Payment records management
+- Financial tracking
+
+### 📅 Attendance
+- Attendance tracking
+- Daily presence records
+
+### 🎉 Holidays
+- Holiday calendar management
+- Non-working days setup
+
+### 📊 Audit Logs
+- System activity tracking
+- User action history
+
+---
+
+## ⚙️ Base URL
+
+https://crmuz.up.railway.app
+
+
+---
+
+## 📡 Additional Endpoint
+- `/api/workdays/` → Workdays configuration endpoint
+
+---
+
+## 📖 API Docs
+- Swagger UI: `/swagger/`
+- ReDoc: `/redoc/`
+- JSON Schema: `/swagger.json`
+
+---
+
+## ⚡ Notes
+- All endpoints are RESTful
+- Use proper HTTP methods (GET, POST, PUT, DELETE)
+- Always send JSON payloads for requests
+""",
     ),
     public=True,
     permission_classes=[AllowAny],
     authentication_classes=[],
-    url='https://crmuz.up.railway.app', 
+    url='https://crmuz.up.railway.app',
 )
 
 urlpatterns = [
